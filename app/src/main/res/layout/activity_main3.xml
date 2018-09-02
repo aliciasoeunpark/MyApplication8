@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main3Activity">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TableRow>
+        <TextView  android:id="@+id/text01" android:text = "당신이 가고 싶은 장소는 \n100점 만점에 " android:textSize="30dp" />
+
+    </TableRow>
+
+
+
+        <TableRow>
+            <TextView android:id = "@+id/text08" android:textSize="100dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow>
+          <TextView  android:id="@+id/text02" android:text = "점입니다! "  android:textSize="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </TableRow>
+
+        <TableRow></TableRow>
+        <TableRow></TableRow>
+        <TableRow></TableRow>
+        <TableRow></TableRow>
+        <TableRow></TableRow>
+        <TableRow></TableRow>
+        <TableRow>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:id="@+id/main3_imageView1"
+                android:src="@drawable/back"
+                />
+
+        </TableRow>
+
+    </TableLayout>
+</android.support.constraint.ConstraintLayout>

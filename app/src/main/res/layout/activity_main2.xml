@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TableRow>
+        <TextView  android:id="@+id/text01" android:text = "중요한 요소일수록\n 오른쪽으로 당겨주세요!"/>
+    </TableRow>
+        <TableRow>
+            <TextView  android:id="@+id/text02" android:text = "온도"/>
+            <SeekBar
+                android:id="@+id/seekBar1"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:max="20"
+
+                android:progress="5"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView  android:id="@+id/text03" android:text = "방문자 수"/>
+            <SeekBar
+                android:id="@+id/seekBar2"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:max="20"
+                android:progress="5"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView  android:id="@+id/text04" android:text = "거리"/>
+            <SeekBar
+                android:id="@+id/seekBar3"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:max="20"
+                android:progress="5"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView  android:id="@+id/text05" android:text = "가격"/>
+            <SeekBar
+                android:id="@+id/seekBar4"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:max="20"
+                android:progress="5"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView  android:id="@+id/text06" android:text = "강수량"/>
+            <SeekBar
+                android:id="@+id/seekBar5"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:max="20"
+                android:progress="5"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView  android:id="@+id/text07" android:text = "평균머무는 시간"/>
+            <SeekBar
+                android:id="@+id/seekBar6"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:max="20"
+                android:progress="5"
+                />
+        </TableRow>
+
+        <TableRow>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:id="@+id/main2_imageView1"
+                android:src="@drawable/back"
+                />
+        </TableRow>
+
+        <TableRow>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:id="@+id/main2_imageView2"
+                android:src="@drawable/image_1"
+                />
+
+        </TableRow>
+    </TableLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

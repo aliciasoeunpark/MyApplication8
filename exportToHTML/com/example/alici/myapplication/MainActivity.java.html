@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>MainActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+MainActivity.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.example.alici.myapplication; 
+ 
+</span><span class="s0">import </span><span class="s1">android.content.Intent; 
+</span><span class="s0">import </span><span class="s1">android.support.v7.app.AppCompatActivity; 
+</span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+</span><span class="s0">import </span><span class="s1">android.view.View; 
+</span><span class="s0">import </span><span class="s1">android.widget.Button; 
+</span><span class="s0">import </span><span class="s1">android.widget.DatePicker; 
+</span><span class="s0">import </span><span class="s1">android.widget.ImageView; 
+</span><span class="s0">import </span><span class="s1">android.widget.TextView; 
+</span><span class="s0">import </span><span class="s1">android.widget.TimePicker; 
+ 
+</span><span class="s0">import </span><span class="s1">java.time.LocalDateTime; 
+ 
+ 
+</span><span class="s0">public class </span><span class="s1">MainActivity </span><span class="s0">extends </span><span class="s1">AppCompatActivity { 
+ 
+    </span><span class="s0">public int </span><span class="s1">hour, min; 
+    </span><span class="s0">public int </span><span class="s1">year, month, day; 
+ 
+ 
+    @Override 
+    </span><span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) { 
+        </span><span class="s0">super</span><span class="s1">.onCreate(savedInstanceState); 
+        setContentView(R.layout.activity_main); 
+        </span><span class="s0">final </span><span class="s1">TextView t1 = findViewById(R.id.sis); 
+        TimePicker ttp = findViewById(R.id.tp); 
+ 
+        hour = ttp.getHour(); 
+        min = ttp.getMinute(); 
+ 
+        ttp.setOnTimeChangedListener(</span><span class="s0">new </span><span class="s1">TimePicker.OnTimeChangedListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onTimeChanged(TimePicker timePicker, </span><span class="s0">int </span><span class="s1">i, </span><span class="s0">int </span><span class="s1">i1) { 
+                hour = i; 
+                min = i1; 
+            } 
+        }); 
+ 
+        DatePicker dp = findViewById(R.id.dp); 
+ 
+        year = dp.getYear(); 
+        month = dp.getMonth(); 
+        day = dp.getDayOfMonth(); 
+ 
+        dp.setOnDateChangedListener(</span><span class="s0">new </span><span class="s1">DatePicker.OnDateChangedListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onDateChanged(DatePicker datePicker, </span><span class="s0">int </span><span class="s1">i, </span><span class="s0">int </span><span class="s1">i1, </span><span class="s0">int </span><span class="s1">i2) { 
+                year = i; 
+                month=i1; 
+                day=i2; 
+            } 
+        }); 
+ 
+ 
+        Button upper01 =  findViewById(R.id.main1_button01); 
+        upper01.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View view) { 
+                Intent i = </span><span class="s0">new </span><span class="s1">Intent(getApplicationContext(), Main2Activity.</span><span class="s0">class</span><span class="s1">); 
+                i.putExtra(</span><span class="s2">&quot;year&quot;</span><span class="s1">, year); 
+                i.putExtra(</span><span class="s2">&quot;month&quot;</span><span class="s1">, month); 
+                i.putExtra(</span><span class="s2">&quot;day&quot;</span><span class="s1">, day); 
+                i.putExtra(</span><span class="s2">&quot;hour&quot;</span><span class="s1">, hour); 
+                i.putExtra(</span><span class="s2">&quot;min&quot;</span><span class="s1">, min); 
+                startActivity(i); 
+            } 
+        }); 
+        Button uppper01 =  findViewById(R.id.main1_button02); 
+        uppper01.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View view) { 
+                Intent i = </span><span class="s0">new </span><span class="s1">Intent(getApplicationContext(), Main2Activity.</span><span class="s0">class</span><span class="s1">); 
+                i.putExtra(</span><span class="s2">&quot;year&quot;</span><span class="s1">, year); 
+                i.putExtra(</span><span class="s2">&quot;month&quot;</span><span class="s1">, month); 
+                i.putExtra(</span><span class="s2">&quot;day&quot;</span><span class="s1">, day); 
+                i.putExtra(</span><span class="s2">&quot;hour&quot;</span><span class="s1">, hour); 
+                i.putExtra(</span><span class="s2">&quot;min&quot;</span><span class="s1">, min); 
+                startActivity(i); 
+            } 
+        }); 
+ 
+        Button upppper01 =  findViewById(R.id.main1_button03); 
+        upppper01.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View view) { 
+                Intent i = </span><span class="s0">new </span><span class="s1">Intent(getApplicationContext(), Main2Activity.</span><span class="s0">class</span><span class="s1">); 
+                i.putExtra(</span><span class="s2">&quot;year&quot;</span><span class="s1">, year); 
+                i.putExtra(</span><span class="s2">&quot;month&quot;</span><span class="s1">, month); 
+                i.putExtra(</span><span class="s2">&quot;day&quot;</span><span class="s1">, day); 
+                i.putExtra(</span><span class="s2">&quot;hour&quot;</span><span class="s1">, hour); 
+                i.putExtra(</span><span class="s2">&quot;min&quot;</span><span class="s1">, min); 
+                startActivity(i); 
+            } 
+        }); 
+ 
+        Button uppppper01 =  findViewById(R.id.main1_button04); 
+        uppppper01.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View view) { 
+                Intent i = </span><span class="s0">new </span><span class="s1">Intent(getApplicationContext(), Main2Activity.</span><span class="s0">class</span><span class="s1">); 
+                i.putExtra(</span><span class="s2">&quot;year&quot;</span><span class="s1">, year); 
+                i.putExtra(</span><span class="s2">&quot;month&quot;</span><span class="s1">, month); 
+                i.putExtra(</span><span class="s2">&quot;day&quot;</span><span class="s1">, day); 
+                i.putExtra(</span><span class="s2">&quot;hour&quot;</span><span class="s1">, hour); 
+                i.putExtra(</span><span class="s2">&quot;min&quot;</span><span class="s1">, min); 
+                startActivity(i); 
+            } 
+        }); 
+ 
+ 
+ 
+ 
+        ImageView upeer4 = findViewById(R.id.main1_imageView1); 
+        upeer4.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View view) { 
+                finish(); 
+            } 
+        }); 
+    } 
+}</span></pre>
+</body>
+</html>

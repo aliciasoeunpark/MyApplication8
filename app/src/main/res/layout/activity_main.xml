@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <TextView android:id="@+id/text01" android:text = " 가고싶은 위치가 어딘가요?"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:id = "@+id/sas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+        <TableRow>
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dp">
+        </DatePicker>
+        </TableRow>
+        <TableRow>
+            <TextView android:id = "@+id/sis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+        <TableRow>
+            <TimePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tp">
+            </TimePicker>
+        </TableRow>
+
+<TableRow>
+    <Button android:id="@+id/main1_button01" android:text="헤밍웨이의 집"/>
+</TableRow>
+
+        <TableRow>
+            <Button android:id="@+id/main1_button02" android:text="에버글레이즈국립공원"/>
+        </TableRow>
+
+        <TableRow>
+            <Button android:id="@+id/main1_button03" android:text="플로리다 리틀쿠바"/>
+        </TableRow>
+
+        <TableRow>
+            <Button android:id="@+id/main1_button04" android:text="키웨스트"/>
+        </TableRow>
+
+        <TableRow>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:id="@+id/main1_imageView1"
+                android:src="@drawable/back"
+                />
+
+        </TableRow>
+    </TableLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
